@@ -1,0 +1,46 @@
+{
+  "name": "omniprompt-backend",
+  "version": "1.0.0",
+  "description": "Backend API for OmniPrompt - GitHub x Hugging Face for AI Prompts",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:push": "prisma db push",
+    "prisma:seed": "tsx prisma/seed.ts",
+    "db:setup": "prisma db push && tsx prisma/seed.ts",
+    "db:switch:mysql": "node -e \"const fs=require('fs'); fs.copyFileSync('prisma/schema.mysql.prisma', 'prisma/schema.prisma'); console.log('Switched to MySQL schema');\" && prisma generate",
+    "db:switch:sqlite": "node -e \"const fs=require('fs'); fs.copyFileSync('prisma/schema.sqlite.prisma', 'prisma/schema.prisma'); console.log('Switched to SQLite schema');\" && prisma generate",
+    "import:open-data": "tsx prisma/import-open-datasets.ts",
+    "import:curated": "tsx prisma/import-curated-prompts.ts"
+  },
+  "dependencies": {
+    "@prisma/adapter-mariadb": "^6.4.1",
+    "@prisma/client": "^6.4.1",
+    "bcryptjs": "^2.4.3",
+    "mariadb": "^3.4.0",
+    "compression": "^1.8.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.0",
+    "google-auth-library": "^11.0.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/compression": "^1.8.1",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.13.9",
+    "prisma": "^6.4.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}

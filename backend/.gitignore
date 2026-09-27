@@ -1,0 +1,14 @@
+# Secrets — never commit. Contains DATABASE_URL, JWT secrets, OAuth client IDs.
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+
+# Downloaded by `npm run import:open-data`
+media/
+
+# Local SQLite dev database
+prisma/dev.db
+prisma/dev.db-journal

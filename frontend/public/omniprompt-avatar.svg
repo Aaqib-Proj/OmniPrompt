@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="OmniPrompt Avatar">
+  <rect width="400" height="400" fill="#0e1013"/>
+  <g transform="translate(200, 200) scale(10.5) translate(-16, -16)">
+    <!-- Logomark circle (Prompt Orb) -->
+    <circle cx="16" cy="16" r="16" fill="#e6e8eb"/>
+    <!-- Terminal Chevron -->
+    <path d="M10.5 10.5 L16 16 L10.5 21.5" fill="none" stroke="#0e1013" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Accent Cursor Bar -->
+    <path d="M18.8 21.5 H22.8" stroke="#f07a42" stroke-width="2.8" stroke-linecap="round"/>
+  </g>
+</svg>

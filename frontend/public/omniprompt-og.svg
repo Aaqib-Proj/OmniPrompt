@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="OmniPrompt Open Graph Preview">
+  <defs>
+    <radialGradient id="og-glow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#d6541d" stop-opacity="0.12" />
+      <stop offset="60%" stop-color="#0e1013" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2e35" />
+      <stop offset="100%" stop-color="#181b20" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0e1013" />
+  <rect width="1200" height="630" fill="url(#og-glow)" />
+
+  <!-- Subtle Container Frame -->
+  <rect x="80" y="60" width="1040" height="510" rx="20" fill="#13161a" stroke="url(#card-border)" stroke-width="1.5" />
+
+  <!-- Center Lockup Group -->
+  <g transform="translate(600, 240)">
+    <!-- Logo Mark (72x72) -->
+    <g transform="translate(-210, -36) scale(2.25)">
+      <circle cx="16" cy="16" r="16" fill="#e6e8eb" />
+      <path d="M10.5 10.5 L16 16 L10.5 21.5" fill="none" stroke="#0e1013" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18.8 21.5 H22.8" stroke="#f07a42" stroke-width="2.8" stroke-linecap="round" />
+    </g>
+
+    <!-- Wordmark -->
+    <text x="-120" y="16" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="52" font-weight="600" letter-spacing="-1.5" fill="#e6e8eb">
+      OmniPrompt
+    </text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="600" y="340" text-anchor="middle" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="26" font-weight="500" fill="#f07a42" letter-spacing="-0.3">
+    Open prompts for every model.
+  </text>
+
+  <!-- Description -->
+  <text x="600" y="385" text-anchor="middle" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="400" fill="#9ba1a6" letter-spacing="-0.2">
+    Browse, fork, and craft production-ready AI prompts across FLUX, Claude, GPT-4o, Midjourney, Sora &amp; more.
+  </text>
+
+  <!-- Badges / Categories -->
+  <g transform="translate(600, 450)">
+    <text text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="500" fill="#606770" letter-spacing="1">
+      IMAGES · VIDEOS · CODE &amp; AGENTS · UI/UX · AUDIO · TEXT · APPLICATIONS
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "name": "promptit-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PromptIt — GitHub x Hugging Face for AI Prompts & Artifacts",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "seed": "npm --prefix backend run prisma:seed",
+    "setup": "npm --prefix backend run db:setup",
+    "setup:all": "npm run setup && npm run import:open-data",
+    "import:open-data": "npm --prefix backend run import:open-data",
+    "import:curated": "npm --prefix backend run import:curated"
+  },
+  "keywords": ["ai", "prompts", "github", "huggingface", "generative-ai"],
+  "author": "PromptIt Open Source",
+  "license": "MIT"
+}

@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Production builds
+dist/
+*/dist/
+build/
+*/build/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+
+# Databases & SQLite
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+prisma/dev.db
+backend/prisma/dev.db
+backend/dev.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Media and large binary archives
+media/
+*/media/
+*.zip
+*.tar.gz
+*.rar
+abd.zip
+backend-deploy.zip
+frontend-dist.zip
+brag-output/
+brag-output-*/
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.agents/
+.claude/
