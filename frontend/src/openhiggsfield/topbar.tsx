@@ -95,10 +95,10 @@ export function Topbar({
               cursor: "pointer",
             }}
             onClick={onExit}
-            title="Return to PromptIt Community"
+            title="Return to OmniPrompt Community"
           >
             <span>←</span>
-            <span>Back to PromptIt</span>
+            <span>Back to OmniPrompt</span>
           </button>
         </div>
       )}

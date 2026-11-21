@@ -58,7 +58,7 @@ export async function submitGeneration(plane: GenerationPlane): Promise<QueuedGe
   };
 }
 
-/** Every request in flight, answered in one round trip via PromptIT backend. */
+/** Every request in flight, answered in one round trip via the OmniPrompt backend. */
 export async function getGenerationStatuses(data: unknown): Promise<StatusResult[]> {
   const requestIds = parseRequestIds(data);
   const response = await fetch("/api/v1/higgsfield/status", {

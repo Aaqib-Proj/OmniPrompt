@@ -94,8 +94,17 @@ app.use('/api/v1/stats', memoryCacheMiddleware(30), statsRoutes);
 app.use('/api/v1/public', memoryCacheMiddleware(15), publicRoutes);
 app.use('/api/v1/higgsfield', higgsfieldRoutes);
 
-// Global Error Handler
+// Global Error Handler. Body-parser failures are the caller's fault, not ours, so they
+// get an honest 4xx instead of being laundered into a 500.
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  if (err?.type === 'entity.too.large') {
+    res.status(413).json({ error: 'Request body is too large.' });
+    return;
+  }
+  if (err?.type === 'entity.parse.failed' || err instanceof SyntaxError) {
+    res.status(400).json({ error: 'Request body is not valid JSON.' });
+    return;
+  }
   res.status(500).json({ error: safeError(err, 'Internal Server Error') });
 });
 

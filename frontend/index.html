@@ -2,22 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%23111418'/><path d='M10.5 10.5 L16 16 L10.5 21.5' fill='none' stroke='white' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/><path d='M18.8 21.5 H22.8' stroke='%23d6541d' stroke-width='2.8' stroke-linecap='round'/></svg>" />
+    <!-- Favicon: the mark cropped to its bounds so it fills the tab, recoloured for dark tab strips. -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='3 3 42 42'><style>path{fill:%23111418}rect{fill:%23d6541d}@media (prefers-color-scheme:dark){path{fill:%23e6e8eb}rect{fill:%23f07a42}}</style><path d='M7.5 19.5A16.5 16.5 0 1 1 20.09 35.53A2.5 2.5 0 0 0 17 37.96V40.25A4.75 4.75 0 0 1 7.5 40.25Z'/><rect x='21.5' y='9.5' width='5' height='20' rx='2.5'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0e1013" media="(prefers-color-scheme: dark)" />
     <title>OmniPrompt · Open prompts for every model</title>
     <meta name="description" content="OmniPrompt — browse, fork and improve AI prompts for FLUX, Stable Diffusion, Veo, Claude and GPT-4o — with their outputs, parameters and version history." />
-    <!-- Open Graph / Social -->
+
+    <!-- Home-screen icons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Link previews: how OmniPrompt looks when someone shares it -->
+    <meta property="og:site_name" content="OmniPrompt" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="OmniPrompt · Open prompts for every model" />
-    <meta property="og:description" content="OmniPrompt — browse, fork and improve AI prompts for FLUX, Stable Diffusion, Veo, Claude and GPT-4o — with their outputs, parameters and version history." />
-    <meta property="og:image" content="/omniprompt-og.svg" />
+    <meta property="og:description" content="Browse, fork and improve AI prompts — with the outputs they produced, their parameters and version history." />
+    <meta property="og:url" content="%VITE_SITE_URL%" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="OmniPrompt" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@useomniprompt" />
+    <meta name="twitter:creator" content="@useomniprompt" />
     <meta name="twitter:title" content="OmniPrompt · Open prompts for every model" />
-    <meta name="twitter:description" content="OmniPrompt — browse, fork and improve AI prompts for FLUX, Stable Diffusion, Veo, Claude and GPT-4o — with their outputs, parameters and version history." />
-    <meta name="twitter:image" content="/omniprompt-og.svg" />
+    <meta name="twitter:description" content="Browse, fork and improve AI prompts — with the outputs they produced, their parameters and version history." />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.png" />
     <!-- Apply the saved (or system) theme before first paint to avoid a flash. -->
     <script>
       (function () {
@@ -30,7 +42,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="root"></div>

@@ -13,13 +13,13 @@ export const StudioPage: React.FC = () => {
   const surfaceParam = (searchParams.get('surface') as 'image' | 'video') || undefined;
 
   useEffect(() => {
-    document.title = 'Higgsfield AI Studio — PromptIt';
+    document.title = 'Higgsfield AI Studio · OmniPrompt';
     return () => {
-      document.title = 'PromptIt — GitHub x Hugging Face for AI Prompts';
+      document.title = 'OmniPrompt · Open prompts for every model';
     };
   }, []);
 
-  const handlePublishToPromptIt = (run: RunRecord) => {
+  const handlePublishToOmniPrompt = (run: RunRecord) => {
     const url = run.urls[0] || '';
     const mediaType = run.kind === 'video' ? 'VIDEO' : 'IMAGE';
     
@@ -52,7 +52,7 @@ export const StudioPage: React.FC = () => {
         initialPrompt={promptParam}
         initialModel={modelParam}
         initialSurface={surfaceParam}
-        onPublishToPromptIt={handlePublishToPromptIt}
+        onPublishToOmniPrompt={handlePublishToOmniPrompt}
         onExit={handleExit}
       />
     </div>

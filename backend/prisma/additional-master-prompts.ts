@@ -181,7 +181,7 @@ Engineered for Suno v4 and Udio. Uses structural bracket tags to command dynamic
     media: [
       {
         type: 'IMAGE',
-        url: 'https://images.unsplash.com/photo-1520523839898-507127053c37?w=1200&auto=format&fit=crop&q=80',
+        url: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1200&auto=format&fit=crop&q=80',
         caption: 'Classical piano and string acoustic concert hall setting'
       }
     ],
@@ -565,7 +565,7 @@ Automates dynamic pricing algorithms for Shopify Plus, Amazon FBA, and WooCommer
     media: [
       {
         type: 'IMAGE',
-        url: 'https://images.unsplash.com/photo-1556742049-0a67e5572263?w=1200&auto=format&fit=crop&q=80',
+        url: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1200&auto=format&fit=crop&q=80',
         caption: 'Mobile online storefront shopping cart and pricing checkout'
       }
     ],

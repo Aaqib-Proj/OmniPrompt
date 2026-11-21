@@ -18,6 +18,7 @@ import { StudioPage } from './pages/StudioPage';
 import { useAuthStore } from './stores/authStore';
 import { AuthMode } from './lib/events';
 import { initGlobalClickSound } from './lib/sound';
+import { RouteTitle } from './components/common/RouteTitle';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -32,7 +33,10 @@ const NotFoundPage: React.FC = () => (
     <p className="font-mono text-sm text-fg-subtle">404</p>
     <h1 className="text-2xl font-semibold mt-2">This page doesn’t exist</h1>
     <p className="text-fg-muted mt-2">The link may be broken, or the page may have been moved.</p>
-    <Link to="/" className="btn btn-default mt-6">Go home</Link>
+    <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+      <Link to="/explore" className="btn btn-primary">Browse prompts</Link>
+      <Link to="/" className="btn btn-default">Go home</Link>
+    </div>
   </div>
 );
 
@@ -59,6 +63,7 @@ export const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <RouteTitle />
       <div className="min-h-screen flex flex-col">
         <Navbar
           onOpenSearch={() => setIsSearchOpen(true)}

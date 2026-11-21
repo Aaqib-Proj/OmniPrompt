@@ -50,6 +50,12 @@ export const ProfilePage: React.FC = () => {
       .finally(() => setLoading(false));
   }, [username]);
 
+  useEffect(() => {
+    if (profile?.username) {
+      document.title = `${profile.name || profile.username} (@${profile.username}) · OmniPrompt`;
+    }
+  }, [profile?.username, profile?.name]);
+
   if (loading) {
     return (
       <div>

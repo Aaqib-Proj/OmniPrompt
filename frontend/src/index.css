@@ -55,8 +55,9 @@
     line-height: 1.5;
   }
 
+  /* Selecting text shows the brand colour — a small signature you feel rather than notice. */
   ::selection {
-    background: rgb(var(--link) / 0.22);
+    background: rgb(var(--accent) / 0.24);
   }
 
   :focus-visible {
@@ -73,6 +74,35 @@
   * {
     scrollbar-width: thin;
     scrollbar-color: rgb(var(--line)) transparent;
+  }
+
+  /* Anchor links land below the sticky header instead of under it. */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+}
+
+/* The mark's caret blinks like a real cursor while the logo is hovered or focused —
+   the brand waiting for your prompt. steps() keeps it a hard on/off, never a fade. */
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}
+
+a:hover .logo-lockup .logo-caret,
+a:focus-visible .logo-lockup .logo-caret {
+  animation: caret-blink 1.06s steps(1, end) infinite;
+}
+
+/* Respect people who ask their OS for less motion — no exceptions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

@@ -29,12 +29,16 @@ export async function hasPlatformCredentials(): Promise<boolean> {
   const localKey = getStoredPlatformKey();
   if (localKey) return true;
 
-  // Check if backend has a configured server key
+  // Otherwise the built-in platform key may cover us — but only for signed-in
+  // accounts, so we ask the server what this particular visitor can actually use.
   try {
-    const res = await fetch("/api/v1/higgsfield/config");
+    const token = typeof window !== "undefined" ? localStorage.getItem("promptit_token") : null;
+    const res = await fetch("/api/v1/higgsfield/config", {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+    });
     if (res.ok) {
       const data = await res.json();
-      return !!data.hasServerKey;
+      return !!data.canUseServerKey;
     }
   } catch {
     // ignore network errors

@@ -15,7 +15,10 @@
     "db:switch:mysql": "node -e \"const fs=require('fs'); fs.copyFileSync('prisma/schema.mysql.prisma', 'prisma/schema.prisma'); console.log('Switched to MySQL schema');\" && prisma generate",
     "db:switch:sqlite": "node -e \"const fs=require('fs'); fs.copyFileSync('prisma/schema.sqlite.prisma', 'prisma/schema.prisma'); console.log('Switched to SQLite schema');\" && prisma generate",
     "import:open-data": "tsx prisma/import-open-datasets.ts",
-    "import:curated": "tsx prisma/import-curated-prompts.ts"
+    "import:curated": "tsx prisma/import-curated-prompts.ts",
+    "import:signature": "tsx prisma/import-signature-prompts.ts",
+    "media:check": "tsx prisma/repair-broken-media.ts",
+    "media:repair": "tsx prisma/repair-broken-media.ts --apply"
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "^6.4.1",

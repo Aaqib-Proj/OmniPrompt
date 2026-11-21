@@ -325,7 +325,7 @@ Everything needed to build a Figma / Miro style multiplayer collaborative canvas
     media: [
       {
         type: 'IMAGE',
-        url: 'https://images.unsplash.com/photo-1542744094-3a31727221eb?w=1200&auto=format&fit=crop&q=80',
+        url: 'https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&auto=format&fit=crop&q=80',
         caption: 'Creative collaborative canvas interface design'
       }
     ],

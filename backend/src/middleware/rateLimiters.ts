@@ -35,3 +35,16 @@ export const createActionLimiter = rateLimit({
     code: 'CREATION_LIMIT_EXCEEDED'
   }
 });
+
+// Generation limiter: 20 submits per 15 minutes. Each one spends real credits on an
+// upstream vendor, so this is deliberately tighter than the content-creation limit.
+export const generationLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 20,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: {
+    error: 'Generation rate limit reached. Please wait a few minutes before generating again.',
+    code: 'GENERATION_LIMIT_EXCEEDED'
+  }
+});

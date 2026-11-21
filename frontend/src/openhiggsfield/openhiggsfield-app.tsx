@@ -162,7 +162,7 @@ export interface OpenHiggsfieldAppProps {
   initialPrompt?: string;
   initialModel?: string;
   initialSurface?: Surface;
-  onPublishToPromptIt?: (run: RunRecord) => void;
+  onPublishToOmniPrompt?: (run: RunRecord) => void;
   onExit?: () => void;
 }
 
@@ -171,7 +171,7 @@ export function OpenHiggsfieldApp({
   initialPrompt,
   initialModel,
   initialSurface,
-  onPublishToPromptIt,
+  onPublishToOmniPrompt,
   onExit,
 }: OpenHiggsfieldAppProps) {
   const surface = useActive((state) => state.surface);
@@ -731,7 +731,7 @@ export function OpenHiggsfieldApp({
             onClose={() => setViewerId(null)}
             onReuse={() => retry(viewerItem)}
             onFavorite={() => toggleFavorite(viewerItem)}
-            onPublish={onPublishToPromptIt}
+            onPublish={onPublishToOmniPrompt}
             /* The viewer is released along with the run, so undoing the
                delete restores it to the grid and not back over the studio. */
             onDelete={() => {

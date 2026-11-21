@@ -164,6 +164,11 @@ export const PromptDetailPage: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idOrSlug]);
 
+  // Name the tab after the prompt, so a wall of open tabs stays readable.
+  useEffect(() => {
+    if (prompt?.title) document.title = `${prompt.title} · OmniPrompt`;
+  }, [prompt?.title]);
+
   if (loading) return <DetailSkeleton />;
 
   if (!prompt) {
